@@ -86,7 +86,7 @@ def save_regression_to_CSV(symbols):
                         df.loc[index,'prediction'] = sum(np.array(coefs)*np.array(df.loc[index,['lagged prices','sector lagged returns', 'style lagged returns', 'spy lagged returns', 'intercept']])) #prediction calculated by multiplying coefficients wit data values at current day
 
                 df['diff'] = df['prediction'] - df['lagged prices'] 
-                df['diff %'] = df['diff']/df['lagged prices'] #diff is positive if regression predicts a gain the next day
+                df['predicted returns'] = df['diff']/df['lagged prices'] #returns are positive if regression predicts a higher price the next day
                 
                 #save dataframe to csv of form 'symbol_df.csv'
                 filename = '/Volumes/EMTECC450/CodingProjects/AlgoTrading/IndustryRegression/symbolCSVs/{}_df.csv'.format(symbol)
