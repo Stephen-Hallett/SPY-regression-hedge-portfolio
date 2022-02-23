@@ -25,6 +25,7 @@ Using the information gathered in the first step, for each stock we download pri
 _Prices =  B0*lagged prices + B1*SPY returns + B2*sector returns + B3*style returns + B4_
   
 For each of the sector,investment style and SPY ETFs, the following columns are created so that the lagged returns can be used in the regression.
+  
 <img width="405" alt="image" src="https://user-images.githubusercontent.com/87107274/155247021-27e2b29b-85b0-4822-a511-2099d4994717.png">
 
 Now for the actual regression:
